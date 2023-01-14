@@ -1,0 +1,32 @@
+.card-panel {
+  margin: 0 0;
+  background-color: #235789;
+  font-family: "auth-font";
+}
+.main-title {
+  text-align: center;
+  font-weight: bolder;
+  color: #118ab2;
+}
+
+.body {
+  margin-top: 50px !important;
+}
+
+.tabs a {
+  color: #118ab2;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.tabs .active {
+  background: inherit !important;
+}
+
+.auth-content {
+  height: 70vh !important;
+}
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: white;
+}

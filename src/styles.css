@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~materialize-css/dist/css/materialize.min.css";
+@import "./assets/style/custom-style.css";
+
+@font-face {
+    font-family: 'sans-arabic';
+    src: url('./assets/fonts/IBMPlexSansArabic-Regular.ttf');
+}
+@font-face {
+    font-family: 'auth-font';
+    src: url('./assets/fonts/DancingScript-VariableFont_wght.ttf');
+}
