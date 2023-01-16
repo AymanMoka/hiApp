@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="container">
+  <div class="row">
+    <form class="col s12"  novalidate [formGroup]="login" (ngSubmit)="loginUser()">
+      <div class="row formInput">
+        <div class="input-field col s12">
+          <input formControlName="username"  type="text"  />
+          <label for="first_name">Username</label>
+        </div>
+      </div>
+
+      <div class="row formInput">
+        <div class="input-field col s12">
+          <input  formControlName="password"  type="password"  />
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="formInput">
+        <button class="btn waves-effect">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
