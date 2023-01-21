@@ -1,3 +1,4 @@
+import { TokenService } from './../../services/token.service';
 import { Router } from '@angular/router';
 import { AuthService } from './../../services/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -10,8 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   login!: FormGroup;
+  loading: boolean = false;
+  errMsg!: string;
 
-  constructor(private authService: AuthService, private router:Router) {
+  constructor(private authService: AuthService, private router: Router, private tokenService:TokenService) {
 
   }
   ngOnInit(): void {
@@ -22,14 +25,23 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    console.log(this.login.value);
-    this.authService.loginUser(this.login.value).subscribe(
-      data => {
-        this.router.navigate(['/streams']);
-      }, err => {
-        console.log(err.error.message);
-      }
-    )
+    this.loading = true;
+    
+   setTimeout(() => {
+     this.authService.loginUser(this.login.value).subscribe(
+       data => {
+        //  console.log(data);
+         this.tokenService.setToken(data?.token);
+         this.loading = false;
+         this.router.navigate(['/streams']);
+       }, err => {
+         this.loading = false;
+         if (err.error.message) {
+           this.errMsg = err.error.message;
+         }
+       }
+     )
+   }, 3000);
   }
 
 }

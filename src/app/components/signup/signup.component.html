@@ -1,28 +1,37 @@
 <div class="container">
   <div class="row">
-    <form class="col s12" [formGroup]="signUp" novalidate (ngSubmit) = "signupUser()">
+    <div class="center-align" >
+      <app-spinner *ngIf="loading"></app-spinner>
+      <h4 class="red-text text-darken-3">{{errMsg}}</h4>
+    </div>
+    <form
+      class="col s12"
+      [formGroup]="signUp"
+      novalidate
+      (ngSubmit)="signupUser()"
+    >
       <div class="row formInput">
         <div class="input-field col s12">
-          <input formControlName="username" type="text"  />
+          <input formControlName="username" type="text" />
           <label for="first_name">Username</label>
         </div>
       </div>
 
       <div class="row formInput">
         <div class="input-field col s12">
-          <input formControlName="email"  type="email"  />
+          <input formControlName="email" type="email" />
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row formInput">
         <div class="input-field col s12">
-          <input formControlName="password" type="password"  />
+          <input formControlName="password" type="password" />
           <label for="password">Password</label>
         </div>
       </div>
       <div class="row formInput">
         <div class="input-field col s12">
-          <input formControlName="repeatPassword" type="password"  />
+          <input formControlName="repeatPassword" type="password" />
           <label for="repeatPassword">Password</label>
         </div>
       </div>

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./streams.component.css']
 })
 export class StreamsComponent {
+  constructor() {
+ 
+  }
+  ngOnInit(): void {
+
+  }
 
 }

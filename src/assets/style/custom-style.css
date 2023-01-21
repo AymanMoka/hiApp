@@ -19,3 +19,9 @@ input[type="email"]:not(.browser-default),
 textarea.materialize-textarea {
   border-bottom: 1px solid #118ab2;
 }
+input:not([type]):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label {
+  color: #118ab2;
+}
