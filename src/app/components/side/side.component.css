@@ -1,0 +1,23 @@
+.list_side {
+  padding: 0;
+}
+.count {
+  margin-left: 5px;
+  color: #89919c !important;
+  font-weight: initial !important;
+}
+
+.collection .collection-item {
+  padding: 16px 6px;
+}
+.collection.with-header .collection-header {
+  background-color: whitesmoke;
+}
+#side {
+  margin-top: 2rem;
+}
+
+span,
+i {
+  color: #118ab2 !important;
+}

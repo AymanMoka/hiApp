@@ -1,0 +1,49 @@
+#post {
+  margin-top: 2rem;
+}
+.btn {
+  background-color: #118ab2;
+}
+.post-div {
+  background-color: whitesmoke;
+}
+.btn:hover {
+  background-color: white;
+  color: #118ab2;
+}
+.post-content {
+  position: relative;
+  top: 20px;
+}
+form {
+  background-color: #ffffff;
+}
+
+.form-div {
+  margin: 0px 20px 0px 20px;
+}
+
+.photo-btn {
+  height: 36px;
+  line-height: 2.5rem;
+  padding: 0 16px;
+  margin-top: 7px;
+  font-size: 18px;
+}
+
+.input-row {
+  top: 5px;
+  position: relative;
+}
+.post-btn {
+  float: right;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.file-field input.file-path {
+  width: 0;
+}
+.file-field input[type="file"] {
+  width: 70% !important;
+}
