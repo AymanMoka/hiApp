@@ -3,10 +3,10 @@
     <div class="col s12">
         <div class="card post-div">
             <div class="card-content">
-                <form>
+                <form [formGroup]="post" (ngSubmit)="addPost()">
                     <div class="row form-div">
                         <div class="input-field col s12 post-content">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea id="textarea1" formControlName="post" class="materialize-textarea"></textarea>
                             <label for="textarea1">What's on your mind , Amir?</label>
                             <div class="row input-row">
                                 <div class="col s6">

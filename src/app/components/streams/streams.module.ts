@@ -1,3 +1,5 @@
+import { PostService } from './../../services/post.service';
+import { ReactiveFormsModule } from '@angular/forms';
 import { SideComponent } from './../side/side.component';
 import { NavbarComponent } from './../navbar/navbar.component';
 import { StreamsComponent } from './streams.component';
@@ -19,7 +21,9 @@ import { PostsComponent } from '../posts/posts.component';
   imports: [
     CommonModule,
     StreamsRoutingModule,
-    NavbarComponent
-  ]
+    NavbarComponent,
+    ReactiveFormsModule
+  ],
+  providers:[PostService]
 })
 export class StreamsModule { }
