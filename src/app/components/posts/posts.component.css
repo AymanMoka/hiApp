@@ -1,3 +1,41 @@
-#posts{
-    margin-top: 2rem;
+#posts {
+  margin-top: 2rem;
+}
+.title {
+  font-weight: bold;
+  color: #118ab2;
+}
+
+.liked{
+  color: #118ab2;
+}
+
+.time {
+  font-size: 14px;
+  color: black;
+}
+.post-text {
+  padding: 15px 5px !important;
+}
+
+.icon-Span {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.material-icons {
+  display: inline-flex;
+  vertical-align: top;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.card-action {
+  border: none !important;
+  padding-top: 0 !important;
+  margin-left: -25px !important;
+}
+
+.collection {
+  border: none !important;
 }

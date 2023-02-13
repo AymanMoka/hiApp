@@ -1,3 +1,4 @@
+import { Posts } from './../model/postsModel';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -13,4 +14,12 @@ export class PostService {
   addPost(post: string):Observable<any>{
     return this.http.post(`${environment.apiUrl}/post/add-post`, post);
   }
+  getAllPosts():Observable<any>{
+    return this.http.get(`${environment.apiUrl}/post/all`);
+  }
+
+  likePost(post: Posts):Observable<any>{
+    return this.http.post(`${environment.apiUrl}/post/like-post`, post);
+  }
+  
 }

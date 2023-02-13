@@ -1,3 +1,4 @@
+import { User } from './../../model/user';
 import { TokenService } from './../../services/token.service';
 import { Router } from '@angular/router';
 import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
@@ -12,6 +13,7 @@ import * as M from 'materialize-css';
 })
 export class NavbarComponent implements OnInit , OnDestroy{
 
+  user!: User;
   constructor(private router: Router, private tokenService:TokenService , private renderer:Renderer2) {
 
   }
@@ -22,6 +24,7 @@ export class NavbarComponent implements OnInit , OnDestroy{
       draggable: true,
       inDuration:900
     });
+    this.user=this.tokenService.getPayload();
   }
 
   logOut() {
