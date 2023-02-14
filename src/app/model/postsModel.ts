@@ -5,7 +5,7 @@ export interface Posts {
     usernmae: string;
     totalLikes: number;
     createdAt: Date;
-    comments: any[];
+    comments: Comment[];
     likes: any[];
     __v: number;
 }
@@ -21,4 +21,12 @@ export interface UserID {
 export interface Post {
     postId: string;
     _id: string;
+}
+
+export interface Comment {
+    userId: string
+    comment: string
+    username: string
+    createdAt: string
+    _id: string
 }

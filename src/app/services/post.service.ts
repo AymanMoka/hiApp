@@ -10,16 +10,24 @@ import { Injectable } from '@angular/core';
 export class PostService {
 
   constructor(private http: HttpClient) { }
-  
-  addPost(post: string):Observable<any>{
-    return this.http.post(`${environment.apiUrl}/post/add-post`, post);
+
+  addPost(post: string): Observable<Posts> {
+    return this.http.post<Posts>(`${environment.apiUrl}/post/add-post`, post);
   }
-  getAllPosts():Observable<any>{
-    return this.http.get(`${environment.apiUrl}/post/all`);
+  getAllPosts(): Observable<Posts[]> {
+    return this.http.get<Posts[]>(`${environment.apiUrl}/post/all`);
   }
 
-  likePost(post: Posts):Observable<any>{
-    return this.http.post(`${environment.apiUrl}/post/like-post`, post);
+  likePost(post: Posts): Observable<Posts> {
+    return this.http.post<Posts>(`${environment.apiUrl}/post/like-post`, post);
   }
-  
+  addComment(postId: string, comment: string): Observable<any> {
+    return this.http.post(`${environment.apiUrl}/post/add-comment`, { postId, comment });
+  }
+
+  getPostById(postId: string): Observable<Posts> {
+    return this.http.get<Posts>(`${environment.apiUrl}/post/${postId}`);
+  }
+
+
 }

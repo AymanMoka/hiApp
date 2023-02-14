@@ -1,3 +1,5 @@
+import { ReactiveFormsModule } from '@angular/forms';
+import { SideComponent } from './../side/side.component';
 import { NavbarComponent } from './../navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,7 +15,9 @@ import { CommentsComponent } from './comments.component';
   imports: [
     CommonModule,
     CommentsRoutingModule,
-    NavbarComponent
+    NavbarComponent,
+    SideComponent,
+    ReactiveFormsModule
   ]
 })
 export class CommentsModule { }
