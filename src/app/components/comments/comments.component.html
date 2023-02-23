@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container-fluid animated fadeIn" style="margin-top: 10px">
+<div class="container" style="margin-top: 10px">
   <div class="row">
     <div class="col s12 m5 l4">
       <app-side></app-side>
@@ -13,7 +13,7 @@
               alt=""
               class="circle"
             />
-            <span class="title">{{ post.userId.username }}</span>
+            <span class="title">{{ post.userId?.username }}</span>
             <p class="time">{{ timeAgo(post.createdAt) }}</p>
           </li>
         </ul>
@@ -51,15 +51,16 @@
       <div class="row comments">
         <ul
           class="collection comment col s12 m10"
-          *ngFor="let comment of comments"
+          *ngFor="let comment of comments | paginate: { itemsPerPage: 5, currentPage: p }"
         >
           <li class="collection-item avatar">
             <img class="circle" src="http://placeimg.com/100/100/nature" />
-            <span class="title">{{ comment.username }}</span>
-            <p class="post-comment">{{ comment.comment }}</p>
+            <span class="title">{{ comment?.username }}</span>
+            <p class="post-comment">{{ comment?.comment }}</p>
           </li>
         </ul>
       </div>
+      <pagination-controls  *ngIf="comments?.length !== 0" (pageChange)="p = $event"></pagination-controls>
     </div>
   </div>
 </div>

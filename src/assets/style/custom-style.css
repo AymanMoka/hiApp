@@ -28,3 +28,16 @@ textarea.materialize-textarea:focus:not([readonly]) + label
   color: #118ab2;
 }
 
+.ngx-pagination .current{
+  color: #118ab2 !important;
+  background:inherit !important;
+  font-weight: bold !important;
+}
+.ngx-pagination{
+  background-color: whitesmoke !important;
+}
+
+pagination-template nav {
+  width: 90% !important;
+  margin: auto !important;
+}

@@ -1,10 +1,11 @@
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-side',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './side.component.html',
   styleUrls: ['./side.component.css']
 })

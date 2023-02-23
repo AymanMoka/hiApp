@@ -21,3 +21,15 @@ span,
 i {
   color: #118ab2 !important;
 }
+
+a{
+    color: #118ab2 !important;
+    font-weight: 600 !important;
+}
+
+.active a{
+    color: whitesmoke !important;
+}
+.active {
+  background-color: #118ab2 !important;
+}
