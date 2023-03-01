@@ -17,6 +17,7 @@
   margin-top: 2rem;
 }
 
+
 span,
 i {
   color: #118ab2 !important;
@@ -27,7 +28,7 @@ a{
     font-weight: 600 !important;
 }
 
-.active a{
+.active a , li.active i{
     color: whitesmoke !important;
 }
 .active {

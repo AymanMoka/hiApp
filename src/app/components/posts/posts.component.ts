@@ -42,7 +42,12 @@ export class PostsComponent implements OnInit {
         this.posts = data;  
         console.log(this.posts); 
       },
-      error: (err) => { console.log(err); }
+      error: (err) => { 
+        if(err.error.token === null) {
+          this.tokenService.deleteToken(); // delete token if token is null
+          this.router.navigate(['']); // navigate to home page
+        }
+       }
     })
   }
 
