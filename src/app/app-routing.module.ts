@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: '', loadChildren: () => import('./components/auth-tabs/auth.module').then(m => m.AuthModule) },
   { path: 'streams', canActivate: [AuthGuard], loadChildren: () => import('./components/streams/streams.module').then(m => m.StreamsModule) },
   { path: 'people', canActivate: [AuthGuard], loadChildren: () => import('./components/people/people.module').then(m => m.PeopleModule) },
+  { path: 'Following', canActivate: [AuthGuard], loadChildren: () => import('./components/following/following.module').then(m => m.FollowingModule) },
   { path: 'post/:id', canActivate: [AuthGuard], loadChildren: () => import('./components/comments/comments.module').then(m => m.CommentsModule) },
 ];
 

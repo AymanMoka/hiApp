@@ -10,8 +10,19 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   constructor(private http: HttpClient) { }
-  
-  getAllUsers():Observable<User[]> {
+
+  getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${environment.apiUrl}/all-users`);
+  }
+
+  getUser(id: string): Observable<User> {
+    return this.http.get<User>(`${environment.apiUrl}/user/${id}`);
+  }
+  followUser(followingId: string):Observable<string> {
+    return this.http.post<string>(`${environment.apiUrl}/follow-user`, { followingId });
+  }
+
+  unfollowUser(followingId: string) {
+    return this.http.post(`${environment.apiUrl}/unfollow-user`, { followingId });
   }
 }
