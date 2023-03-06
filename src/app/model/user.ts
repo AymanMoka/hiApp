@@ -7,6 +7,7 @@ export interface User {
     posts: Posts[]
     followers: Follower[]
     following: Following[]
+    notifications?: Notification[]
     __v: number
 }
 
@@ -42,4 +43,14 @@ export interface FollowingId {
     following: Following[]
     __v: number
 }
+export interface Notification {
+    senderId: string
+    action: string
+    viewProfile: boolean
+    created: string
+    read: boolean
+    _id: string
+}
+
+
 

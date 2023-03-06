@@ -1,0 +1,51 @@
+.card-image {
+  height: 200px;
+  border: none;
+}
+.card-title {
+  margin-top: -35px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.card-action {
+  padding: 10px !important;
+  border: none;
+}
+.img-div {
+  display: block;
+  position: relative;
+}
+.responsive-img {
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  margin: 0 auto !important;
+  top: 15px !important;
+}
+.card {
+  margin-top: 2rem;
+}
+
+.btn {
+  background-color: #118ab2;
+  padding: 0px 5px !important;
+}
+.btn:hover {
+  background-color: whitesmoke;
+  color: #118ab2;
+}
+.chat-icon {
+  font-size: 37px;
+  color: #118ab2;
+}
+.chat-icon:hover {
+  color: #118ab2;
+}
+.right {
+  margin-left: 0px !important;
+}
+.material-icons {
+  display: inline-flex;
+  vertical-align: top;
+  cursor: pointer;
+}
